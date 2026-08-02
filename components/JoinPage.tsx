@@ -130,29 +130,29 @@ export default function JoinPage() {
         </div>
       </section>
 
-      {/* Podcast + press features */}
+      {/* Podcast + press features (alternating image side) */}
       <section className="mx-auto mt-16 max-w-site space-y-6 px-5 md:px-8">
-        {[join.podcast, join.press].map((f, i) => (
-          <div
-            key={i}
-            className={
-              'grid items-center gap-0 overflow-hidden rounded-card ' +
-              (i === 0 ? 'bg-teal text-white' : 'border border-black/10 bg-neutral-50 text-ink')
-            }
-            style={{ gridTemplateColumns: undefined }}
-          >
-            <div className={'grid md:grid-cols-2 ' + (i === 1 ? '[direction:rtl]' : '')}>
-              <div className="relative min-h-[240px] [direction:ltr]">
+        {[join.podcast, join.press].map((f, i) => {
+          const dark = i === 0;
+          return (
+            <div
+              key={i}
+              className={
+                'grid items-center overflow-hidden rounded-card md:grid-cols-2 ' +
+                (dark ? 'bg-teal text-white' : 'border border-black/10 bg-neutral-50 text-ink')
+              }
+            >
+              <div className={'relative min-h-[240px] ' + (i === 1 ? 'md:order-2' : '')}>
                 <Image src={f.image} alt="" fill sizes="(max-width:768px) 100vw, 640px" className="object-cover" />
               </div>
-              <div className="px-8 py-10 [direction:ltr] md:px-12">
+              <div className="px-8 py-10 md:px-12">
                 <h2 className="text-2xl font-extrabold md:text-3xl">{f.heading}</h2>
-                <p className={'mt-4 leading-relaxed ' + (i === 0 ? 'text-white/90' : 'text-ink/75')}>{f.body}</p>
+                <p className={'mt-4 leading-relaxed ' + (dark ? 'text-white/90' : 'text-ink/75')}>{f.body}</p>
                 <SmartLink
                   href={f.cta.href}
                   className={
-                    'mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold transition-transform hover:scale-[1.03] ' +
-                    (i === 0 ? 'bg-teal-mint text-white' : 'bg-teal text-white')
+                    'mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03] ' +
+                    (dark ? 'bg-teal-mint' : 'bg-teal')
                   }
                 >
                   {f.cta.label}
@@ -160,8 +160,8 @@ export default function JoinPage() {
                 </SmartLink>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </section>
 
       <PartnerLogos />
