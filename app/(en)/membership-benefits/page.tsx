@@ -1,0 +1,10 @@
+import BenefitsPage from '@/components/BenefitsPage';
+import { getDict } from '@/lib/dict';
+
+const d = getDict('en');
+
+export const metadata = { title: d.meta.benefits.title };
+
+export default function Page() {
+  return <BenefitsPage locale="en" />;
+}

@@ -1,23 +1,23 @@
 import SmartLink from '@/components/SmartLink';
-import { footer, routes } from '@/lib/config';
+import { getDict } from '@/lib/dict';
+import { localePath, type Locale } from '@/lib/i18n';
 
-export default function Footer() {
+export default function Footer({ locale }: { locale: Locale }) {
+  const { ui, footer } = getDict(locale);
+
   return (
     <footer className="mt-24 bg-teal text-white">
       <div className="mx-auto max-w-site px-5 py-16 md:px-8">
         <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr]">
           <div>
             <SmartLink
-              href={routes.club}
+              href={localePath(locale, '/')}
               className="grid h-12 w-12 place-items-center rounded-full border-2 border-white text-xs font-extrabold"
-              aria-label="BEAT Cycling Club home"
+              aria-label={ui.home}
             >
               BEAT
             </SmartLink>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/80">
-              BEAT Cycling Club — a rider-owned club for everyone who wants more
-              out of cycling, on and off the bike.
-            </p>
+            <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/80">{ui.footerBlurb}</p>
           </div>
 
           {footer.columns.map((col) => (
@@ -42,8 +42,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/15 pt-6 text-sm text-white/60 sm:flex-row">
-          <p>© 2026 BEAT Cycling Club. All rights reserved.</p>
-          <p>English clone — built with Next.js (SSG).</p>
+          <p>{ui.footerRights}</p>
+          <p>{ui.footerBuilt}</p>
         </div>
       </div>
     </footer>

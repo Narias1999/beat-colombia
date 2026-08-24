@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import { partners } from '@/lib/config';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
-export default function PartnerLogos() {
+export default function PartnerLogos({ locale }: { locale: Locale }) {
   // Duplicate the list so the CSS marquee loops seamlessly (-50% translate).
   const row = [...partners, ...partners];
 
   return (
     <section className="mx-auto mt-20 max-w-site px-5 md:px-8">
       <h2 className="text-center text-sm font-bold uppercase tracking-[0.2em] text-ink/50">
-        Official Partners &amp; Suppliers
+        {getDict(locale).ui.partnersHeading}
       </h2>
 
       {/* White partner marks sit on a branded teal strip so they read clearly */}

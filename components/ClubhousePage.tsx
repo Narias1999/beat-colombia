@@ -3,7 +3,8 @@ import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
-import { clubhouse } from '@/lib/content';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
 function Check() {
   return (
@@ -15,9 +16,11 @@ function Check() {
   );
 }
 
-export default function ClubhousePage() {
+export default function ClubhousePage({ locale }: { locale: Locale }) {
+  const { clubhouse } = getDict(locale);
+
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <PageHero
         title={clubhouse.hero.title}
         lead={clubhouse.hero.lead}
@@ -96,7 +99,7 @@ export default function ClubhousePage() {
         </div>
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

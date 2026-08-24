@@ -2,7 +2,8 @@ import Image from 'next/image';
 import PageShell from '@/components/PageShell';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
-import { home } from '@/lib/home';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
 function Arrow() {
   return (
@@ -12,11 +13,11 @@ function Arrow() {
   );
 }
 
-export default function HomePage() {
-  const { hero, news, podcast, membership, collection } = home;
+export default function HomePage({ locale }: { locale: Locale }) {
+  const { hero, news, podcast, membership, collection } = getDict(locale).home;
 
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       {/* ---------------------------------------------------------- Hero -- */}
       <section className="mx-auto max-w-site px-5 pt-4 md:px-8">
         <div className="grid gap-6 lg:grid-cols-2">
@@ -129,7 +130,7 @@ export default function HomePage() {
               </div>
               <p className="mt-3 flex-1 text-[15px] leading-relaxed text-ink/75">{o.desc}</p>
               <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-teal group-hover:gap-2.5">
-                Become a {o.name}
+                {membership.becomeA} {o.name}
                 <Arrow />
               </span>
             </SmartLink>
@@ -148,7 +149,7 @@ export default function HomePage() {
             href={collection.href}
             className="rounded-full bg-teal px-7 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03]"
           >
-            Shop now
+            {collection.shopNow}
           </SmartLink>
         </div>
 
@@ -174,7 +175,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

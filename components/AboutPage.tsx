@@ -2,11 +2,14 @@ import Image from 'next/image';
 import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import PartnerLogos from '@/components/PartnerLogos';
-import { about } from '@/lib/content';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
-export default function AboutPage() {
+export default function AboutPage({ locale }: { locale: Locale }) {
+  const { about } = getDict(locale);
+
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <PageHero
         title={about.hero.title}
         lead={about.hero.lead}
@@ -64,7 +67,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

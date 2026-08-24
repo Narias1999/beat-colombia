@@ -21,7 +21,7 @@ export default function FeatureCard({ feature }: { feature: Feature }) {
           alt={feature.alt}
           fill
           sizes="(max-width: 768px) 100vw, 640px"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
       </div>

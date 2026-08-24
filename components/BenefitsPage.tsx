@@ -3,11 +3,14 @@ import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
-import { benefits } from '@/lib/content';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
-export default function BenefitsPage() {
+export default function BenefitsPage({ locale }: { locale: Locale }) {
+  const { benefits } = getDict(locale);
+
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <PageHero
         title={benefits.hero.title}
         lead={benefits.hero.lead}
@@ -78,7 +81,7 @@ export default function BenefitsPage() {
         </div>
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

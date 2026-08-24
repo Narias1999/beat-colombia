@@ -2,11 +2,14 @@ import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import FeatureCard from '@/components/FeatureCard';
 import PartnerLogos from '@/components/PartnerLogos';
-import { club } from '@/lib/content';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
-export default function ClubPage() {
+export default function ClubPage({ locale }: { locale: Locale }) {
+  const { club } = getDict(locale);
+
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <PageHero
         title={club.hero.title}
         lead={club.hero.lead}
@@ -23,7 +26,7 @@ export default function ClubPage() {
         </div>
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

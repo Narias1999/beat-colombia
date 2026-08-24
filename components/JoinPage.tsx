@@ -3,7 +3,8 @@ import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
-import { join } from '@/lib/content';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
 function Check() {
   return (
@@ -13,9 +14,11 @@ function Check() {
   );
 }
 
-export default function JoinPage() {
+export default function JoinPage({ locale }: { locale: Locale }) {
+  const { join } = getDict(locale);
+
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <PageHero
         title={join.hero.title}
         lead={join.hero.lead}
@@ -44,7 +47,7 @@ export default function JoinPage() {
             >
               {plan.highlight && (
                 <span className="absolute -top-3 left-8 rounded-full bg-teal-mint px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                  Most chosen
+                  {join.mostChosen}
                 </span>
               )}
               <h3 className="text-xl font-extrabold">{plan.name}</h3>
@@ -164,7 +167,7 @@ export default function JoinPage() {
         })}
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

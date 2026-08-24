@@ -3,11 +3,14 @@ import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
-import { challenges } from '@/lib/content';
+import { getDict } from '@/lib/dict';
+import type { Locale } from '@/lib/i18n';
 
-export default function ChallengesPage() {
+export default function ChallengesPage({ locale }: { locale: Locale }) {
+  const { challenges } = getDict(locale);
+
   return (
-    <PageShell>
+    <PageShell locale={locale}>
       <PageHero
         title={challenges.hero.title}
         lead={challenges.hero.lead}
@@ -47,7 +50,7 @@ export default function ChallengesPage() {
             <div className="mt-6 rounded-card bg-teal px-8 py-9 text-white md:px-12">
               <p className="text-lg font-medium">{c.blurb}</p>
               <div className="mt-5">
-                <p className="text-sm font-bold uppercase tracking-wider text-teal-mint">How does it work?</p>
+                <p className="text-sm font-bold uppercase tracking-wider text-teal-mint">{challenges.howLabel}</p>
                 <p className="mt-2 max-w-3xl leading-relaxed text-white/90">{c.how}</p>
               </div>
               <ul className="mt-5 flex flex-wrap gap-2">
@@ -61,7 +64,7 @@ export default function ChallengesPage() {
                 href={c.href}
                 className="mt-6 inline-flex items-center gap-2 rounded-full bg-teal-mint px-6 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03]"
               >
-                Check the Online Clubhouse
+                {challenges.itemCta}
                 <span aria-hidden>→</span>
               </SmartLink>
             </div>
@@ -106,7 +109,7 @@ export default function ChallengesPage() {
         </div>
       </section>
 
-      <PartnerLogos />
+      <PartnerLogos locale={locale} />
     </PageShell>
   );
 }

@@ -38,41 +38,6 @@ export const ext = {
   terms: `${ORIGINAL}/pages/algemene-voorwaarden`,
 };
 
-export type NavItem = { label: string; href: string };
-
-// Primary navigation. First Team + Shop are external (not translated).
-export const nav: NavItem[] = [
-  { label: 'About BEAT', href: routes.about },
-  { label: 'First Team', href: ext.firstTeam },
-  { label: 'Club', href: routes.club },
-];
-
-export const footer = {
-  columns: [
-    {
-      heading: 'The Club',
-      links: [
-        { label: 'Club', href: routes.club },
-        { label: 'Membership Benefits', href: routes.benefits },
-        { label: 'Online Clubhouse', href: routes.clubhouse },
-        { label: 'Challenges', href: routes.challenges },
-        { label: 'Become a Member', href: routes.join },
-      ] as NavItem[],
-    },
-    {
-      heading: 'BEAT',
-      links: [
-        { label: 'Organisation', href: ext.organisation },
-        { label: 'Careers', href: ext.careers },
-        { label: 'Sustainability', href: ext.sustainability },
-        { label: 'Partners', href: ext.partners },
-        { label: 'Contact', href: ext.contact },
-        { label: 'Terms & Conditions', href: ext.terms },
-      ] as NavItem[],
-    },
-  ],
-};
-
 // Official partner/supplier logos — the site's real assets (white marks).
 export const partners = [
   { src: uc('b2dec311-34d0-4e5d-bbc6-a954c841c4ce', 'partner.png', 500), alt: 'Official partner' },
