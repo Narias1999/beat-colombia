@@ -28,7 +28,11 @@ export default function JoinPage({ locale }: { locale: Locale }) {
         imageAlt={join.hero.imageAlt}
       />
 
-      {/* Plan chooser */}
+      {/*
+        Plan chooser hidden for now: we are not taking payments yet, so the
+        "¿Quieres más información?" form below stands in for it. Restore this
+        whole block (it still uses join.plans / join.mostChosen / join.payNote,
+        which stay in the dictionaries) when memberships go live.
       <section className="mx-auto mt-16 max-w-site px-5 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-extrabold text-ink md:text-4xl">{join.chooseHeading}</h2>
@@ -109,6 +113,7 @@ export default function JoinPage({ locale }: { locale: Locale }) {
           {join.payNote}
         </p>
       </section>
+      */}
 
       <LeadForm locale={locale} />
 
