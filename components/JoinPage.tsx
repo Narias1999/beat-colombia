@@ -3,6 +3,7 @@ import PageShell from '@/components/PageShell';
 import PageHero from '@/components/PageHero';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
+import LeadForm from '@/components/LeadForm';
 import { getDict } from '@/lib/dict';
 import type { Locale } from '@/lib/i18n';
 
@@ -103,7 +104,13 @@ export default function JoinPage({ locale }: { locale: Locale }) {
             </div>
           ))}
         </div>
+
+        <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-ink/60">
+          {join.payNote}
+        </p>
       </section>
+
+      <LeadForm locale={locale} />
 
       {/* Testimonials */}
       <section className="mx-auto mt-20 max-w-site px-5 md:px-8">
