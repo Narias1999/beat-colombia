@@ -280,7 +280,7 @@ export const en = {
       email: 'Email',
       emailPlaceholder: 'you@email.com',
       phone: 'Phone',
-      phonePlaceholder: '+57 300 000 0000',
+      phonePlaceholder: '300 000 0000',
       submit: 'Send',
       sending: 'Sending…',
       success: 'Thanks! We have your details and will be in touch soon.',

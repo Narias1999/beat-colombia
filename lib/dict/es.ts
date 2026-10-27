@@ -282,7 +282,7 @@ export const es: Dict = {
       email: 'Correo electrónico',
       emailPlaceholder: 'tu@correo.com',
       phone: 'Teléfono',
-      phonePlaceholder: '+57 300 000 0000',
+      phonePlaceholder: '300 000 0000',
       submit: 'Enviar',
       sending: 'Enviando…',
       success: '¡Gracias! Ya tenemos tus datos y te contactamos muy pronto.',
