@@ -70,8 +70,8 @@ export default function LeadForm({ locale }: { locale: Locale }) {
           <p className="mx-auto mt-3 max-w-xl text-white/85">{t.body}</p>
         </div>
 
-        <form onSubmit={onSubmit} noValidate className="mx-auto mt-8 max-w-3xl">
-          <div className="grid gap-4 md:grid-cols-3">
+        <form onSubmit={onSubmit} noValidate className="mx-auto mt-8 max-w-md">
+          <div className="grid gap-4">
             <div>
               <label htmlFor="lead-name" className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-teal-mint">
                 {t.name}
@@ -99,7 +99,7 @@ export default function LeadForm({ locale }: { locale: Locale }) {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="rounded-full bg-teal-mint px-9 py-3.5 text-[15px] font-bold uppercase tracking-wide text-white transition-transform hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60"
+              className="w-full rounded-full bg-teal-mint px-9 py-3.5 text-[15px] font-bold uppercase tracking-wide text-white transition-transform hover:scale-[1.03] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {status === 'sending' ? t.sending : t.submit}
             </button>
