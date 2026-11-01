@@ -61,9 +61,12 @@ export default function HomePage({ locale }: { locale: Locale }) {
         </div>
         <div className="mt-8 flex snap-x gap-5 overflow-x-auto px-5 pb-4 md:px-8 [scrollbar-width:thin]">
           {news.items.map((item) => (
-            <article
+            <SmartLink
               key={item.title}
-              className="w-[280px] shrink-0 snap-start overflow-hidden rounded-card border border-black/10 bg-white"
+              href={news.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group w-[280px] shrink-0 snap-start overflow-hidden rounded-card border border-black/10 bg-white transition-shadow hover:shadow-lg"
             >
               <div className="relative aspect-square overflow-hidden bg-neutral-100">
                 <Image
@@ -79,8 +82,12 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 <h3 className="mt-1 line-clamp-2 min-h-[44px] text-[15px] font-bold leading-snug text-ink">
                   {item.title}
                 </h3>
+                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-teal">
+                  {item.cta}
+                  <Arrow />
+                </span>
               </div>
-            </article>
+            </SmartLink>
           ))}
         </div>
       </section>

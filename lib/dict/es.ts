@@ -77,6 +77,7 @@ export const es: Dict = {
     },
     news: {
       heading: 'Lo que está pasando en el club',
+      href: ORIGINAL,
       items: [
         { title: 'Warre van den Meersche llega al Primer Equipo como practicante', tag: 'Noticias', cta: 'Más info', image: uc('2ab9fe73-05ae-46d4-9d4e-041d00770bd0', 'news1.png') },
         { title: '10 años de BEAT: celebremos una década con todo el club', tag: 'Evento', cta: 'Consigue tu boleta', image: uc('20120f41-c5e1-4223-bdbf-22ee73737487', 'news2.png') },

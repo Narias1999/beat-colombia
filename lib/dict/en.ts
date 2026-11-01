@@ -75,6 +75,7 @@ export const en = {
     },
     news: {
       heading: 'What’s happening in the club',
+      href: ORIGINAL,
       items: [
         { title: 'Warre van den Meersche joins the First Team as a trainee', tag: 'News', cta: 'More info', image: uc('2ab9fe73-05ae-46d4-9d4e-041d00770bd0', 'news1.png') },
         { title: '10 years of BEAT: celebrate a decade with the whole club', tag: 'Event', cta: 'Get your ticket', image: uc('20120f41-c5e1-4223-bdbf-22ee73737487', 'news2.png') },
