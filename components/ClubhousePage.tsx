@@ -31,7 +31,7 @@ export default function ClubhousePage({ locale }: { locale: Locale }) {
 
       {/* Access callouts + app CTA */}
       <section className="mx-auto mt-12 max-w-site px-5 md:px-8">
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="mx-auto max-w-2xl">
           {clubhouse.callouts.map((c) => (
             <div key={c.title} className="rounded-card border border-black/10 bg-neutral-50 p-7">
               <h3 className="text-lg font-bold text-ink">{c.title}</h3>
@@ -47,14 +47,6 @@ export default function ClubhousePage({ locale }: { locale: Locale }) {
           ))}
         </div>
 
-        <div className="mt-8 text-center">
-          <SmartLink
-            href={clubhouse.appCta.href}
-            className="inline-block rounded-full bg-teal-mint px-9 py-4 text-base font-bold uppercase tracking-wide text-white transition-transform hover:scale-[1.03]"
-          >
-            {clubhouse.appCta.label}
-          </SmartLink>
-        </div>
       </section>
 
       {/* What is the Online Clubhouse — checklist + collage */}

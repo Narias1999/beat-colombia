@@ -61,10 +61,9 @@ export default function HomePage({ locale }: { locale: Locale }) {
         </div>
         <div className="mt-8 flex snap-x gap-5 overflow-x-auto px-5 pb-4 md:px-8 [scrollbar-width:thin]">
           {news.items.map((item) => (
-            <SmartLink
+            <article
               key={item.title}
-              href={news.href}
-              className="group w-[280px] shrink-0 snap-start overflow-hidden rounded-card border border-black/10 bg-white transition-shadow hover:shadow-lg"
+              className="w-[280px] shrink-0 snap-start overflow-hidden rounded-card border border-black/10 bg-white"
             >
               <div className="relative aspect-square overflow-hidden bg-neutral-100">
                 <Image
@@ -80,12 +79,8 @@ export default function HomePage({ locale }: { locale: Locale }) {
                 <h3 className="mt-1 line-clamp-2 min-h-[44px] text-[15px] font-bold leading-snug text-ink">
                   {item.title}
                 </h3>
-                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-bold text-teal">
-                  {item.cta}
-                  <Arrow />
-                </span>
               </div>
-            </SmartLink>
+            </article>
           ))}
         </div>
       </section>
@@ -99,13 +94,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
           <div className="px-8 py-12 md:px-12">
             <h2 className="text-3xl font-extrabold md:text-4xl">{podcast.heading}</h2>
             <p className="mt-4 max-w-md leading-relaxed text-white/90">{podcast.body}</p>
-            <SmartLink
-              href={podcast.cta.href}
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-teal-mint px-7 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03]"
-            >
-              {podcast.cta.label}
-              <Arrow />
-            </SmartLink>
           </div>
         </div>
       </section>

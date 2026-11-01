@@ -59,17 +59,6 @@ export const es: Dict = {
           { label: 'Únete al Club', href: p(routes.join) },
         ],
       },
-      {
-        heading: 'BEAT',
-        links: [
-          { label: 'Organización', href: ext.organisation },
-          { label: 'Vacantes', href: ext.careers },
-          { label: 'Sostenibilidad', href: ext.sustainability },
-          { label: 'Socios', href: ext.partners },
-          { label: 'Contacto', href: ext.contact },
-          { label: 'Términos y Condiciones', href: ext.terms },
-        ],
-      },
     ],
   },
 
@@ -88,7 +77,6 @@ export const es: Dict = {
     },
     news: {
       heading: 'Lo que está pasando en el club',
-      href: ORIGINAL,
       items: [
         { title: 'Warre van den Meersche llega al Primer Equipo como practicante', tag: 'Noticias', cta: 'Más info', image: uc('2ab9fe73-05ae-46d4-9d4e-041d00770bd0', 'news1.png') },
         { title: '10 años de BEAT: celebremos una década con todo el club', tag: 'Evento', cta: 'Consigue tu boleta', image: uc('20120f41-c5e1-4223-bdbf-22ee73737487', 'news2.png') },
@@ -112,7 +100,6 @@ export const es: Dict = {
       heading: '¡Escucha nuestro pódcast!',
       body: 'Métete detrás de cámaras del Primer Equipo y del club con Thijs Zonneveld y sus invitados.',
       image: uc('6309207f-c082-4f93-8289-2be0fb89e17f', 'podcast.jpg', 1400),
-      cta: { label: 'Escuchar el pódcast', href: `${ORIGINAL}/pages/podcast` },
     },
     membership: {
       heading: 'Hazte miembro de BEAT',
@@ -235,13 +222,7 @@ export const es: Dict = {
         body: 'Únete al club para desbloquear el acceso completo a la Casa Club Online y a todo lo que hay adentro.',
         cta: { label: 'Únete al club', href: p(routes.join) },
       },
-      {
-        title: '¿Ya eres miembro y no puedes entrar?',
-        body: 'Escríbenos y nuestro equipo te ayuda a volver a entrar a la casa club.',
-        cta: { label: 'Contactar soporte', href: ext.contact },
-      },
     ],
-    appCta: { label: 'Ir a la Casa Club Online', href: ext.clubhouseApp },
     featuresHeading: '¿Qué es la Casa Club Online?',
     featuresIntro: 'Rodamos en el mundo “real”, pero nos encontramos todos los días en la Casa Club Online. Esto es lo que pasa allí:',
     featuresImage: uc('eaeadb75-e634-4f00-80d7-14f01d940fe5', 'clubhouse-collage.png', 1400),
@@ -298,7 +279,7 @@ export const es: Dict = {
         name: 'Membresía Ciclista',
         price: '€60',
         period: 'por año',
-        href: ext.register,
+        href: p(routes.join),
         button: 'Hazte Ciclista',
         highlight: true,
         groups: [
@@ -329,7 +310,7 @@ export const es: Dict = {
         name: 'Membresía Amigo',
         price: '€30',
         period: 'por año',
-        href: ext.register,
+        href: p(routes.join),
         button: 'Hazte Amigo',
         highlight: false,
         groups: [
@@ -369,13 +350,11 @@ export const es: Dict = {
       heading: 'Escucha a BEAT en De Rode Lantaarn',
       body: 'En este episodio del pódcast de ciclismo De Rode Lantaarn, nuestro director deportivo Thijs Zonneveld se sienta frente al micrófono. Habla de su rol y de la historia del club, del crecimiento de BEAT, de lo que implica trabajar con un equipo profesional y de su visión del ciclismo neerlandés.',
       image: uc('c0969bc5-e713-4999-bd03-ceda40ed3c54', 'podcast.png', 1200),
-      cta: { label: 'Escuchar el pódcast', href: `${ORIGINAL}/pages/podcast` },
     },
     press: {
       heading: 'Lee sobre BEAT en Sporza',
       body: 'Hace poco nuestro club fue protagonista en Sporza. El artículo cuenta cómo BEAT es visto como un nuevo modelo en el ciclismo: desde el papel de la comunidad hasta el camino hacia el máximo nivel. Es lindo ver cómo se percibe desde afuera lo que estamos construyendo juntos.',
       image: uc('8394de53-86dc-4328-891b-698ca484bba1', 'sporza.png', 1200),
-      cta: { label: 'Leer el artículo', href: ORIGINAL },
     },
   },
 
@@ -391,7 +370,6 @@ export const es: Dict = {
       imageAlt: 'Ciclistas de BEAT enfrentando un reto',
     },
     howLabel: '¿Cómo funciona?',
-    itemCta: 'Míralo en la Casa Club Online',
     items: [
       {
         title: 'Strikhedonia',
@@ -401,7 +379,6 @@ export const es: Dict = {
         meta: ['13–14 de junio de 2026', 'Recorre 200 o 400 km en una sola actividad'],
         video: 'c2cT44Cko-o',
         image: uc('44f7363a-ac3f-43f2-9134-8edc167056f5', 'strikhedonia.png', 1200),
-        href: ext.clubhouseApp,
       },
       {
         title: 'SHIMANO SOS Challenge',
@@ -411,7 +388,6 @@ export const es: Dict = {
         meta: ['11 de julio – 2 de agosto', '5 pts por poste SOS · 2 pts por Service Center'],
         video: 'Lzv7WUmh1do',
         image: uc('c4233d85-2613-4a5c-8673-ab18149c5b84', 'sos.png', 1200),
-        href: ext.clubhouseApp,
       },
       {
         title: 'BEAT Every Day',
@@ -421,7 +397,6 @@ export const es: Dict = {
         meta: ['Arranca en septiembre', 'Mínimo 25 km todos los días'],
         video: 'CLbkJhgkNhs',
         image: uc('128421c4-54a0-41f7-bb77-5ea0bba65902', 'everyday.png', 1200),
-        href: ext.clubhouseApp,
       },
     ],
     eventsHeading: 'Donde también rodamos juntos',

@@ -57,17 +57,6 @@ export const en = {
           { label: 'Become a Member', href: p(routes.join) },
         ],
       },
-      {
-        heading: 'BEAT',
-        links: [
-          { label: 'Organisation', href: ext.organisation },
-          { label: 'Careers', href: ext.careers },
-          { label: 'Sustainability', href: ext.sustainability },
-          { label: 'Partners', href: ext.partners },
-          { label: 'Contact', href: ext.contact },
-          { label: 'Terms & Conditions', href: ext.terms },
-        ],
-      },
     ],
   },
 
@@ -86,7 +75,6 @@ export const en = {
     },
     news: {
       heading: 'What’s happening in the club',
-      href: ORIGINAL,
       items: [
         { title: 'Warre van den Meersche joins the First Team as a trainee', tag: 'News', cta: 'More info', image: uc('2ab9fe73-05ae-46d4-9d4e-041d00770bd0', 'news1.png') },
         { title: '10 years of BEAT: celebrate a decade with the whole club', tag: 'Event', cta: 'Get your ticket', image: uc('20120f41-c5e1-4223-bdbf-22ee73737487', 'news2.png') },
@@ -110,7 +98,6 @@ export const en = {
       heading: 'Listen to our podcast!',
       body: 'Go behind the scenes of the First Team and the club with Thijs Zonneveld and guests.',
       image: uc('6309207f-c082-4f93-8289-2be0fb89e17f', 'podcast.jpg', 1400),
-      cta: { label: 'Listen to the podcast', href: `${ORIGINAL}/pages/podcast` },
     },
     membership: {
       heading: 'Become a BEAT member',
@@ -233,13 +220,7 @@ export const en = {
         body: 'Join the club to unlock full access to the Online Clubhouse and everything inside it.',
         cta: { label: 'Become a Member', href: p(routes.join) },
       },
-      {
-        title: 'Already a member with access issues?',
-        body: 'Reach out and our team will get you back into the clubhouse.',
-        cta: { label: 'Contact Support', href: ext.contact },
-      },
     ],
-    appCta: { label: 'Go to the Online Clubhouse', href: ext.clubhouseApp },
     featuresHeading: 'What is the Online Clubhouse?',
     featuresIntro: 'We ride in the “real” world, but meet each other daily in the Online Clubhouse. This is what happens there:',
     featuresImage: uc('eaeadb75-e634-4f00-80d7-14f01d940fe5', 'clubhouse-collage.png', 1400),
@@ -296,7 +277,7 @@ export const en = {
         name: 'Rider Membership',
         price: '€60',
         period: 'per year',
-        href: ext.register,
+        href: p(routes.join),
         button: 'Become a Rider',
         highlight: true,
         groups: [
@@ -327,7 +308,7 @@ export const en = {
         name: 'Friend Membership',
         price: '€30',
         period: 'per year',
-        href: ext.register,
+        href: p(routes.join),
         button: 'Become a Friend',
         highlight: false,
         groups: [
@@ -367,13 +348,11 @@ export const en = {
       heading: 'Listen to BEAT on De Rode Lantaarn',
       body: 'In this episode of the cycling podcast De Rode Lantaarn, our sport director Thijs Zonneveld takes a seat behind the microphone. He talks about his role and the story of the club, the development of BEAT, working with a pro team, and his view on Dutch cycling.',
       image: uc('c0969bc5-e713-4999-bd03-ceda40ed3c54', 'podcast.png', 1200),
-      cta: { label: 'Listen to the podcast', href: `${ORIGINAL}/pages/podcast` },
     },
     press: {
       heading: 'Read about BEAT on Sporza',
       body: 'Our club was recently in the spotlight at Sporza. The article looks at how BEAT is seen as a new model in cycling — from the role of the community to the road toward the highest level. It’s great to see how what we are building together is viewed from the outside.',
       image: uc('8394de53-86dc-4328-891b-698ca484bba1', 'sporza.png', 1200),
-      cta: { label: 'Read the article', href: ORIGINAL },
     },
   },
 
@@ -389,7 +368,6 @@ export const en = {
       imageAlt: 'BEAT riders taking on a challenge',
     },
     howLabel: 'How does it work?',
-    itemCta: 'Check the Online Clubhouse',
     items: [
       {
         title: 'Strikhedonia',
@@ -399,7 +377,6 @@ export const en = {
         meta: ['13–14 June 2026', 'Ride 200 or 400 km in a single activity'],
         video: 'c2cT44Cko-o',
         image: uc('44f7363a-ac3f-43f2-9134-8edc167056f5', 'strikhedonia.png', 1200),
-        href: ext.clubhouseApp,
       },
       {
         title: 'SHIMANO SOS Challenge',
@@ -409,7 +386,6 @@ export const en = {
         meta: ['11 July – 2 August', '5 pts per SOS pole · 2 pts per Service Center'],
         video: 'Lzv7WUmh1do',
         image: uc('c4233d85-2613-4a5c-8673-ab18149c5b84', 'sos.png', 1200),
-        href: ext.clubhouseApp,
       },
       {
         title: 'BEAT Every Day',
@@ -419,7 +395,6 @@ export const en = {
         meta: ['Starts September', 'Minimum 25 km every day'],
         video: 'CLbkJhgkNhs',
         image: uc('128421c4-54a0-41f7-bb77-5ea0bba65902', 'everyday.png', 1200),
-        href: ext.clubhouseApp,
       },
     ],
     eventsHeading: 'Wherever we ride together',

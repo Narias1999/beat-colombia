@@ -60,13 +60,6 @@ export default function ChallengesPage({ locale }: { locale: Locale }) {
                   </li>
                 ))}
               </ul>
-              <SmartLink
-                href={c.href}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-teal-mint px-6 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03]"
-              >
-                {challenges.itemCta}
-                <span aria-hidden>→</span>
-              </SmartLink>
             </div>
           </section>
         ))}

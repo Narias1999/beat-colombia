@@ -23,20 +23,10 @@ export const routes = {
 
 // External links — redirect to the original site (or the real shop)
 export const ext = {
+  // The shop stays on its own domain; Strava is the club's real Strava page.
+  // Everything else used to point at the Dutch site and has been removed.
   shop: 'https://beatcycling.shop/',
-  firstTeam: `${ORIGINAL}/pages/beat-1`,
-  login: `${ORIGINAL}/account/login`,
-  register: `${ORIGINAL}/account/register`,
-  cart: `${ORIGINAL}/cart`,
-  clubhouseApp: 'https://clubhuis.beatcyclingclub.com/feed',
   strava: 'https://www.strava.com/clubs/beatcyclingclub',
-  // Footer info pages (not translated → original site)
-  organisation: `${ORIGINAL}/pages/organisatie`,
-  careers: `${ORIGINAL}/pages/vacatures`,
-  sustainability: `${ORIGINAL}/pages/beatthewaste`,
-  partners: `${ORIGINAL}/pages/partner`,
-  contact: `${ORIGINAL}/pages/contact`,
-  terms: `${ORIGINAL}/pages/algemene-voorwaarden`,
 };
 
 // Official partner/supplier logos — the site's real assets (white marks).

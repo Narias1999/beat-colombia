@@ -163,16 +163,6 @@ export default function JoinPage({ locale }: { locale: Locale }) {
               <div className="px-8 py-10 md:px-12">
                 <h2 className="text-2xl font-extrabold md:text-3xl">{f.heading}</h2>
                 <p className={'mt-4 leading-relaxed ' + (dark ? 'text-white/90' : 'text-ink/75')}>{f.body}</p>
-                <SmartLink
-                  href={f.cta.href}
-                  className={
-                    'mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03] ' +
-                    (dark ? 'bg-teal-mint' : 'bg-teal')
-                  }
-                >
-                  {f.cta.label}
-                  <span aria-hidden>→</span>
-                </SmartLink>
               </div>
             </div>
           );

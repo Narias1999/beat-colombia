@@ -50,16 +50,6 @@ export default function Header({ locale }: { locale: Locale }) {
           >
             {ui.shop}
           </SmartLink>
-          <SmartLink
-            href={ext.login}
-            aria-label={ui.login}
-            className="grid h-10 w-10 place-items-center rounded-full text-ink hover:bg-black/5"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-3.6 3.6-6 8-6s8 2.4 8 6" strokeLinecap="round" />
-            </svg>
-          </SmartLink>
           <LanguageSwitcher locale={locale} />
         </div>
       </div>
