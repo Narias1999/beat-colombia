@@ -55,13 +55,15 @@ export default function AboutPage({ locale }: { locale: Locale }) {
               ))}
             </div>
           </div>
-          <div className="relative min-h-[280px]">
+          {/* Portrait photo (816x1200) in a wide box: a centred cover crop lands
+              on the torsos, so anchor it to the top to keep the faces in frame. */}
+          <div className="relative min-h-[360px] self-stretch">
             <Image
               src={about.future.image}
               alt={about.future.imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 560px"
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
         </div>
