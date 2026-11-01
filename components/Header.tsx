@@ -1,5 +1,6 @@
 import SmartLink from '@/components/SmartLink';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import MobileMenu from '@/components/MobileMenu';
 import { ext, routes } from '@/lib/config';
 import { getDict } from '@/lib/dict';
 import { localePath, type Locale } from '@/lib/i18n';
@@ -51,6 +52,11 @@ export default function Header({ locale }: { locale: Locale }) {
             {ui.shop}
           </SmartLink>
           <LanguageSwitcher locale={locale} />
+          {/* Below md the primary nav and Shop are hidden, so they move here */}
+          <MobileMenu
+            items={[...nav, { label: ui.shop, href: ext.shop }]}
+            menuLabel={ui.menu}
+          />
         </div>
       </div>
     </header>
