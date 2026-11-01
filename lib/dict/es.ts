@@ -38,11 +38,12 @@ export const es: Dict = {
     join: { title: 'Únete al Club – BEAT Cycling Club' },
     challenges: { title: 'Retos 2026 – BEAT Cycling Club' },
     about: { title: 'Sobre BEAT – BEAT Cycling Club' },
+    firstTeam: { title: 'Primer Equipo – BEAT Cycling Club' },
   },
 
   nav: [
     { label: 'Sobre BEAT', href: p(routes.about) },
-    { label: 'Primer Equipo', href: ext.firstTeam },
+    { label: 'Primer Equipo', href: p(routes.firstTeam) },
     { label: 'Club', href: p(routes.club) },
   ],
 
@@ -475,5 +476,47 @@ export const es: Dict = {
       image: uc('c9ea386b-bda5-4e6c-9b85-78ceaf0f6599', 'about-future.png', 1200),
       imageAlt: 'El futuro de BEAT Cycling Club',
     },
+  },
+
+  /* ------------------------------------------------------------ First Team -- */
+  firstTeam: {
+    hero: {
+      title: 'El Primer Equipo',
+      lead: 'Nuestro Primer Equipo compite a nivel continental y representa al club en el pelotón profesional como BEAT CC p/b Saxo.',
+      paragraphs: [
+        'Usan la misma camiseta que nuestros miembros y están presentes dentro del club. Comparten su experiencia y muestran lo que hace falta para rendir a este nivel. No están aparte del club: hacen parte de él.',
+        '¡El Primer Equipo le pone cara al club y acerca el ciclismo profesional como nunca antes!',
+      ],
+      image: uc('c8c5ca66-1b68-4c97-8c57-4e264725407a', 'first-team-hero.png', 1400),
+      imageAlt: 'Un ciclista del Primer Equipo de BEAT celebrando una victoria',
+    },
+    ridersHeading: 'Ciclistas',
+    riders: [
+      { name: 'Stijn Appel', disciplines: 'Ruta | Playa | MTB', image: uc('4824fb15-ae71-4a73-9c32-901c706bfdb4', 'rider.png', 800) },
+      { name: 'Michiel Coppens', disciplines: 'Ruta', image: uc('60436acc-6403-41ba-861d-118772a3ff01', 'rider.png', 800) },
+      { name: 'David Dekker', disciplines: 'Ruta', image: uc('f10c0089-7ffe-4dd7-80dc-4d8cdcaa61c2', 'rider.png', 800) },
+      { name: 'Bram Dissel', disciplines: 'Ruta | Gravel', image: uc('3a941b70-2cb9-4e42-9929-35ff52804b97', 'rider.png', 800) },
+      { name: 'Tijmen Eising', disciplines: 'Ruta | Gravel', image: uc('0568200c-4a6b-4d83-8143-b0814dfaaaee', 'rider.png', 800) },
+      { name: 'Jochem Kerckhaert', disciplines: 'Ruta', image: uc('d3f969e3-7cdf-4d62-882a-961e7dd77d8c', 'rider.png', 800) },
+      { name: 'Jesse Kramer', disciplines: 'Ruta | Gravel', image: uc('33b05cc6-1ef3-4530-a972-9cfaa59c68b5', 'rider.png', 800) },
+      { name: 'Max Kroonen', disciplines: 'Ruta | Gravel', image: uc('ff0c9f1d-94ee-4ca4-b630-9a8136558f6f', 'rider.png', 800) },
+      { name: 'Marijn Maas', disciplines: 'Ruta', image: uc('1d0c97fd-7825-4b62-a880-47ed527dc0b4', 'rider.png', 800) },
+      { name: 'Joost Nat', disciplines: 'Ruta', image: uc('24bd3d74-895f-4810-beef-4ec35d8f0de6', 'rider.png', 800) },
+      { name: 'Daan van Sintmaartensdijk', disciplines: 'Ruta | Playa', image: uc('926f0203-69e0-4245-97cd-6992e6f6efbc', 'rider.png', 800) },
+      { name: 'Warre van den Meerssche', disciplines: 'Practicante ruta', image: uc('ed6c6116-8a49-45da-bf00-6271fd71c023', 'rider.png', 800) },
+    ],
+    calendarHeading: 'Calendario del Primer Equipo',
+    calendar: [
+      { date: '13 oct – 18 oct', name: 'Eneco Tour', place: 'Países Bajos' },
+    ],
+    quotes: [
+      { name: 'Stijn Appel', role: 'Ciclista del Primer Equipo', quote:
+        'Muchas veces el ciclismo se trata solo de ganar. En BEAT se trata de crecer, pelear y rendir juntos, y eso me hace mejor ciclista cada día.' },
+      { name: 'Michiel Coppens', role: 'Ciclista del Primer Equipo', quote:
+        'Sin un club como BEAT, los ciclistas tienen muy poco espacio para despegar de verdad. Incluso cuando estuve gravemente lesionado, BEAT siguió confiando en mí. Esa confianza es la que hoy me permite dar todo de mí.' },
+      { name: 'David Dekker', role: 'Ciclista del Primer Equipo', quote:
+        'Si BEAT no hubiera estado ahí, no habría tenido la oportunidad de volver a mostrarme al máximo nivel. BEAT me da confianza, espacio y una vitrina para mostrar lo que puedo hacer en 2026.' },
+    ],
+    cta: { label: 'Hazte parte del club', href: p(routes.join) },
   },
 };

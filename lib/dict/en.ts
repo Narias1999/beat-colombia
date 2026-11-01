@@ -36,11 +36,12 @@ export const en = {
     join: { title: 'Become a Member – BEAT Cycling Club' },
     challenges: { title: 'Challenges 2026 – BEAT Cycling Club' },
     about: { title: 'About BEAT – BEAT Cycling Club' },
+    firstTeam: { title: 'First Team – BEAT Cycling Club' },
   },
 
   nav: [
     { label: 'About BEAT', href: p(routes.about) },
-    { label: 'First Team', href: ext.firstTeam },
+    { label: 'First Team', href: p(routes.firstTeam) },
     { label: 'Club', href: p(routes.club) },
   ],
 
@@ -473,6 +474,48 @@ export const en = {
       image: uc('c9ea386b-bda5-4e6c-9b85-78ceaf0f6599', 'about-future.png', 1200),
       imageAlt: 'The future of BEAT Cycling Club',
     },
+  },
+
+  /* ------------------------------------------------------------ First Team -- */
+  firstTeam: {
+    hero: {
+      title: 'The First Team',
+      lead: 'Our First Team races at continental level and represents the club in the pro peloton as BEAT CC p/b Saxo.',
+      paragraphs: [
+        'They wear the same jersey as our BEAT members and are visible inside the club. They share their experience and show what it takes to perform at this level. They do not stand apart from the club — they are part of it.',
+        'The First Team gives the club a face and brings professional cycling closer than ever.',
+      ],
+      image: uc('c8c5ca66-1b68-4c97-8c57-4e264725407a', 'first-team-hero.png', 1400),
+      imageAlt: 'A BEAT First Team rider celebrating a win',
+    },
+    ridersHeading: 'Riders',
+    riders: [
+      { name: 'Stijn Appel', disciplines: 'Road | Beach | MTB', image: uc('4824fb15-ae71-4a73-9c32-901c706bfdb4', 'rider.png', 800) },
+      { name: 'Michiel Coppens', disciplines: 'Road', image: uc('60436acc-6403-41ba-861d-118772a3ff01', 'rider.png', 800) },
+      { name: 'David Dekker', disciplines: 'Road', image: uc('f10c0089-7ffe-4dd7-80dc-4d8cdcaa61c2', 'rider.png', 800) },
+      { name: 'Bram Dissel', disciplines: 'Road | Gravel', image: uc('3a941b70-2cb9-4e42-9929-35ff52804b97', 'rider.png', 800) },
+      { name: 'Tijmen Eising', disciplines: 'Road | Gravel', image: uc('0568200c-4a6b-4d83-8143-b0814dfaaaee', 'rider.png', 800) },
+      { name: 'Jochem Kerckhaert', disciplines: 'Road', image: uc('d3f969e3-7cdf-4d62-882a-961e7dd77d8c', 'rider.png', 800) },
+      { name: 'Jesse Kramer', disciplines: 'Road | Gravel', image: uc('33b05cc6-1ef3-4530-a972-9cfaa59c68b5', 'rider.png', 800) },
+      { name: 'Max Kroonen', disciplines: 'Road | Gravel', image: uc('ff0c9f1d-94ee-4ca4-b630-9a8136558f6f', 'rider.png', 800) },
+      { name: 'Marijn Maas', disciplines: 'Road', image: uc('1d0c97fd-7825-4b62-a880-47ed527dc0b4', 'rider.png', 800) },
+      { name: 'Joost Nat', disciplines: 'Road', image: uc('24bd3d74-895f-4810-beef-4ec35d8f0de6', 'rider.png', 800) },
+      { name: 'Daan van Sintmaartensdijk', disciplines: 'Road | Beach', image: uc('926f0203-69e0-4245-97cd-6992e6f6efbc', 'rider.png', 800) },
+      { name: 'Warre van den Meerssche', disciplines: 'Road trainee', image: uc('ed6c6116-8a49-45da-bf00-6271fd71c023', 'rider.png', 800) },
+    ],
+    calendarHeading: 'First Team Calendar',
+    calendar: [
+      { date: '13 Oct – 18 Oct', name: 'Eneco Tour', place: 'Netherlands' },
+    ],
+    quotes: [
+      { name: 'Stijn Appel', role: 'First Team Rider', quote:
+        'Too often cycling is only about winning. At BEAT it is about growing, fighting and performing together — and that makes me a better rider every day.' },
+      { name: 'Michiel Coppens', role: 'First Team Rider', quote:
+        'Without a club like BEAT, riders get too little room to really break through. Even when I was badly injured BEAT kept believing in me. That trust is what lets me get everything out of myself now.' },
+      { name: 'David Dekker', role: 'First Team Rider', quote:
+        'If BEAT had not been there, I would not have had the chance to show myself again at the highest level. BEAT gives me confidence, room and a stage to show what I can do in 2026.' },
+    ],
+    cta: { label: 'Become a clubmate', href: p(routes.join) },
   },
 };
 

@@ -14,6 +14,7 @@ export const uc = (id: string, name = 'image.png', size = 1200) =>
 export const routes = {
   club: '/club',
   about: '/about',
+  firstTeam: '/first-team',
   benefits: '/membership-benefits',
   clubhouse: '/clubhouse',
   join: '/join',
