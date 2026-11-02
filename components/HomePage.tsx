@@ -2,6 +2,7 @@ import Image from 'next/image';
 import PageShell from '@/components/PageShell';
 import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
+import InaugurationBanner from '@/components/InaugurationBanner';
 import { getDict } from '@/lib/dict';
 import type { Locale } from '@/lib/i18n';
 
@@ -54,8 +55,11 @@ export default function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      {/* ------------------------------------------ Inauguration ride -- */}
+      <InaugurationBanner locale={locale} />
+
       {/* ------------------------------------------- What's happening -- */}
-      <section className="mt-20">
+      <section className="mt-16">
         <div className="mx-auto max-w-site px-5 md:px-8">
           <h2 className="text-3xl font-extrabold text-ink md:text-4xl">{news.heading}</h2>
         </div>

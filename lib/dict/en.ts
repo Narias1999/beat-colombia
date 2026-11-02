@@ -37,6 +37,7 @@ export const en = {
     challenges: { title: 'Challenges 2026 – BEAT Cycling Club' },
     about: { title: 'About BEAT – BEAT Cycling Club' },
     firstTeam: { title: 'First Team – BEAT Cycling Club' },
+    inauguration: { title: 'Climb to Patios – BEAT Colombia inaugural ride' },
   },
 
   nav: [
@@ -492,6 +493,91 @@ export const en = {
         'If BEAT had not been there, I would not have had the chance to show myself again at the highest level. BEAT gives me confidence, room and a stage to show what I can do in 2026.' },
     ],
     cta: { label: 'Become a clubmate', href: p(routes.join) },
+  },
+
+  /* ---------------------------------------------------- Inauguration ride -- */
+  inauguration: {
+    badge: 'Club inauguration',
+    kicker: 'Inaugural ride',
+    title: 'Climb to Patios',
+    tagline:
+      'BEAT Colombia rolls out for the first time. One club, one climb, one start — and the whole club on the same road.',
+    dateLong: 'Sunday 8 November',
+    dateShort: 'Sun 8 Nov',
+    time: '8:00 a.m.',
+    place: 'Bicicletería Punto 84, Bogotá',
+    spotsNote: 'Limited spots',
+    homeCta: 'Sign up for the ride',
+    cta: 'Save my spot',
+    stats: [
+      { label: 'Total distance', value: '14 km' },
+      { label: 'The climb', value: '7 km' },
+      { label: 'Elevation gain', value: '400 m' },
+      { label: 'Summit', value: '3,030 m' },
+    ],
+    hero: {
+      paragraphs: [
+        'This is the first time BEAT Colombia rides together, and we are starting with the climb every rider in Bogotá knows: the road up to Alto de Patios.',
+        'We leave together, we climb at our own pace, and we regroup at the top. No race, no categories — just the club on the road for the first time.',
+      ],
+    },
+    profile: {
+      heading: 'The climb',
+      body:
+        'From Carrera Séptima up the La Calera road to the summit stalls: 7 kilometres of steady climbing, around 400 metres of elevation gain and an average gradient of 5.7 %. Add the descent back down and the morning comes to 14 kilometres in total.',
+      note: 'Profile and figures are approximate — we will publish the exact route file with the meeting point.',
+      labels: {
+        alt: 'Elevation profile of the climb to Alto de Patios: 7 km rising from 2,630 m in Bogotá to 3,030 m at the summit.',
+        altitude: 'Altitude (m)',
+        distance: 'Distance (km)',
+        start: 'Bogota',
+        summit: 'Alto de Patios',
+      },
+    },
+    infoHeading: 'What you need to know',
+    info: [
+      { label: 'When', value: 'Sunday 8 November, we roll out at 8:00 a.m. sharp.' },
+      { label: 'Where', value: 'Bicicletería Punto 84, Carrera Séptima, Bogotá.' },
+      { label: 'Meeting point', value: 'Bicicletería Punto 84, on Carrera Séptima, Chapinero — the pin on the map below.' },
+      { label: 'Level', value: 'Open to every rider. Steady pace, nobody gets dropped, we regroup at the summit.' },
+      { label: 'Distance', value: '14 km in total — 7 km up to Patios and back down the same road.' },
+      { label: 'Bring', value: 'Helmet, lights, a windbreaker for the descent, water and something to eat.' },
+    ],
+    map: {
+      heading: 'Meeting point',
+      name: 'Bicicletería Punto 84',
+      street: 'On Carrera Séptima',
+      address: 'Chapinero, Bogotá',
+      body: 'We meet right at the foot of the climb and roll out together at 8:00 a.m. Come a few minutes early so nobody has to wait.',
+      openInMaps: 'Open in Google Maps',
+      embedTitle: 'Map of the meeting point on Carrera Séptima, Bogotá',
+    },
+    closing: {
+      heading: 'Not a clubmate yet?',
+      body: 'The ride is the start. The club is what comes after it — teams, routes, events and everything BEAT does in Colombia.',
+      cta: { label: 'Join the club', href: p(routes.join) },
+    },
+    form: {
+      heading: 'Sign up for the ride',
+      body: 'Spots are limited. Leave us your name and your number and we will confirm your spot and send you the meeting point.',
+      spots: 'Limited spots',
+      name: 'Name',
+      namePlaceholder: 'Your full name',
+      phone: 'Phone / WhatsApp',
+      phonePlaceholder: '300 000 0000',
+      submit: 'Save my spot',
+      sending: 'Sending...',
+      success: 'You are on the list! We will write to you with the meeting point.',
+      error: 'Something went wrong. Please try again in a moment.',
+      required: 'Please fill in your name and your phone number.',
+      notConfigured: 'The form is not connected yet. Please write to us on Instagram.',
+      privacy: 'We only use your details to confirm this ride.',
+      doneTitle: 'You are in, {name}!',
+      doneSub: 'Your spot is reserved. We will message you to confirm before Sunday.',
+      doneWhen: 'When',
+      doneWhere: 'Where',
+      doneAgain: 'Sign someone else up',
+    },
   },
 };
 

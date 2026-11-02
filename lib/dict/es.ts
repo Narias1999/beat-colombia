@@ -39,6 +39,7 @@ export const es: Dict = {
     challenges: { title: 'Retos 2026 – BEAT Cycling Club' },
     about: { title: 'Sobre BEAT – BEAT Cycling Club' },
     firstTeam: { title: 'Primer Equipo – BEAT Cycling Club' },
+    inauguration: { title: 'Subida a Patios – Rodada de inauguración de BEAT Colombia' },
   },
 
   nav: [
@@ -494,5 +495,90 @@ export const es: Dict = {
         'Si BEAT no hubiera estado ahí, no habría tenido la oportunidad de volver a mostrarme al máximo nivel. BEAT me da confianza, espacio y una vitrina para mostrar lo que puedo hacer en 2026.' },
     ],
     cta: { label: 'Hazte parte del club', href: p(routes.join) },
+  },
+
+  /* ---------------------------------------------------- Inauguration ride -- */
+  inauguration: {
+    badge: 'Inauguración del club',
+    kicker: 'Rodada de inauguración',
+    title: 'Subida a Patios',
+    tagline:
+      'BEAT Colombia rueda por primera vez. Un club, una subida, un arranque — y todo el club en la misma carretera.',
+    dateLong: 'Domingo 8 de noviembre',
+    dateShort: 'Dom 8 nov',
+    time: '8:00 a. m.',
+    place: 'Bicicletería Punto 84, Bogotá',
+    spotsNote: 'Cupos limitados',
+    homeCta: 'Inscríbete a la rodada',
+    cta: 'Quiero mi cupo',
+    stats: [
+      { label: 'Distancia total', value: '14 km' },
+      { label: 'La subida', value: '7 km' },
+      { label: 'Desnivel', value: '400 m' },
+      { label: 'Altura final', value: '3.030 m' },
+    ],
+    hero: {
+      paragraphs: [
+        'Es la primera vez que BEAT Colombia rueda junto, y arrancamos con la subida que todo ciclista en Bogotá conoce: la carretera hasta el Alto de Patios.',
+        'Salimos juntos, subimos cada uno a su ritmo y nos reagrupamos arriba. No es competencia ni hay categorías: es el club en la carretera por primera vez.',
+      ],
+    },
+    profile: {
+      heading: 'La subida',
+      body:
+        'Desde la Carrera Séptima por la vía a La Calera hasta los puestos de arriba: 7 kilómetros de subida constante, unos 400 metros de desnivel y una pendiente media del 5,7 %. Sumando la bajada, la mañana queda en 14 kilómetros en total.',
+      note: 'El perfil y las cifras son aproximados — publicaremos la ruta exacta junto con el punto de encuentro.',
+      labels: {
+        alt: 'Perfil de altimetría de la subida al Alto de Patios: 7 km que suben de 2.630 m en Bogotá a 3.030 m en el alto.',
+        altitude: 'Altura (m)',
+        distance: 'Distancia (km)',
+        start: 'Bogotá',
+        summit: 'Alto de Patios',
+      },
+    },
+    infoHeading: 'Lo que necesitas saber',
+    info: [
+      { label: 'Cuándo', value: 'Domingo 8 de noviembre, arrancamos a las 8:00 a. m. en punto.' },
+      { label: 'Dónde', value: 'Bicicletería Punto 84, Carrera Séptima, Bogotá.' },
+      { label: 'Punto de encuentro', value: 'Bicicletería Punto 84, sobre la Carrera Séptima, Chapinero — el pin está en el mapa de abajo.' },
+      { label: 'Nivel', value: 'Abierta a todos. Ritmo parejo, nadie se queda solo y nos reagrupamos en el alto.' },
+      { label: 'Distancia', value: '14 km en total — 7 km de subida hasta Patios y de vuelta por la misma vía.' },
+      { label: 'Lleva', value: 'Casco, luces, rompevientos para la bajada, agua y algo de comer.' },
+    ],
+    map: {
+      heading: 'Punto de encuentro',
+      name: 'Bicicletería Punto 84',
+      street: 'Sobre la Carrera Séptima',
+      address: 'Chapinero, Bogotá',
+      body: 'Nos vemos justo al pie de la subida y arrancamos juntos a las 8:00 a. m. Llega unos minutos antes para que nadie tenga que esperar.',
+      openInMaps: 'Abrir en Google Maps',
+      embedTitle: 'Mapa del punto de encuentro sobre la Carrera Séptima, Bogotá',
+    },
+    closing: {
+      heading: '¿Todavía no eres parte del club?',
+      body: 'La rodada es el arranque. El club es lo que viene después: equipos, rutas, eventos y todo lo que BEAT está armando en Colombia.',
+      cta: { label: 'Únete al club', href: p(routes.join) },
+    },
+    form: {
+      heading: 'Inscríbete a la rodada',
+      body: 'Los cupos son limitados. Déjanos tu nombre y tu número y te confirmamos el cupo y te enviamos el punto de encuentro.',
+      spots: 'Cupos limitados',
+      name: 'Nombre',
+      namePlaceholder: 'Tu nombre completo',
+      phone: 'Celular / WhatsApp',
+      phonePlaceholder: '300 000 0000',
+      submit: 'Quiero mi cupo',
+      sending: 'Enviando...',
+      success: '¡Ya estás en la lista! Te escribimos con el punto de encuentro.',
+      error: 'Algo falló. Intenta de nuevo en un momento.',
+      required: 'Escribe tu nombre y tu número de celular.',
+      notConfigured: 'El formulario aún no está conectado. Escríbenos por Instagram.',
+      privacy: 'Solo usamos tus datos para confirmarte esta rodada.',
+      doneTitle: '¡Listo, {name}!',
+      doneSub: 'Tu cupo está reservado. Te escribimos para confirmarte antes del domingo.',
+      doneWhen: 'Cuándo',
+      doneWhere: 'Dónde',
+      doneAgain: 'Inscribir a alguien más',
+    },
   },
 };
