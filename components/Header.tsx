@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import SmartLink from '@/components/SmartLink';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import MobileMenu from '@/components/MobileMenu';
@@ -12,16 +13,24 @@ export default function Header({ locale }: { locale: Locale }) {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur">
       <div className="mx-auto flex h-20 max-w-site items-center justify-between px-5 md:px-8">
-        {/* Logo + Saxo co-brand lockup */}
-        <SmartLink href={home} className="flex items-center gap-3" aria-label={ui.home}>
-          <span className="text-2xl font-extrabold italic tracking-tight text-ink">BEAT</span>
-          <span className="hidden h-8 w-px bg-black/15 sm:block" />
-          <span className="hidden flex-col leading-none sm:flex">
-            <span className="text-[9px] font-semibold uppercase tracking-wider text-ink/50">
-              {ui.poweredBy}
-            </span>
-            <span className="text-sm font-extrabold tracking-tight text-teal">SAXO</span>
-          </span>
+        {/*
+          The official BEAT / Saxo lockup. Below `sm` the row is too tight for
+          the whole thing, so the box is narrowed and the image cropped from the
+          left — which leaves just the BEAT mark, no second asset needed.
+        */}
+        <SmartLink
+          href={home}
+          className="relative block h-8 w-[78px] shrink-0 sm:h-10 sm:w-[198px]"
+          aria-label={ui.home}
+        >
+          <Image
+            src="/brand/beat-saxo.webp"
+            alt="BEAT Cycling Club — powered by Saxo"
+            fill
+            priority
+            sizes="198px"
+            className="object-cover object-left"
+          />
         </SmartLink>
 
         {/* Primary nav */}

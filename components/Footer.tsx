@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import SmartLink from '@/components/SmartLink';
 import { getDict } from '@/lib/dict';
 import { localePath, type Locale } from '@/lib/i18n';
@@ -10,12 +11,20 @@ export default function Footer({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-site px-5 py-16 md:px-8">
         <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr]">
           <div>
+            {/* The lockup is teal and navy, so it needs a light panel here. */}
             <SmartLink
               href={localePath(locale, '/')}
-              className="grid h-12 w-12 place-items-center rounded-full border-2 border-white text-xs font-extrabold"
+              className="inline-block rounded-card bg-white px-5 py-4"
               aria-label={ui.home}
             >
-              BEAT
+              <Image
+                src="/brand/beat-saxo.webp"
+                alt="BEAT Cycling Club — powered by Saxo"
+                width={2000}
+                height={404}
+                sizes="210px"
+                className="h-9 w-auto"
+              />
             </SmartLink>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/80">{ui.footerBlurb}</p>
           </div>

@@ -23,7 +23,6 @@ export const es: Dict = {
       'BEAT Cycling Club — un club de los ciclistas, para todos los que quieren sacarle más al ciclismo, sobre la bici y fuera de ella.',
     footerRights: '© 2026 BEAT Cycling Club. Todos los derechos reservados.',
     footerBuilt: 'Versión en español — hecha con Next.js (SSG).',
-    poweredBy: 'Con el respaldo de',
   },
 
   meta: {

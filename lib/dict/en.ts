@@ -21,7 +21,6 @@ export const en = {
       'BEAT Cycling Club — a rider-owned club for everyone who wants more out of cycling, on and off the bike.',
     footerRights: '© 2026 BEAT Cycling Club. All rights reserved.',
     footerBuilt: 'English clone — built with Next.js (SSG).',
-    poweredBy: 'Powered by',
   },
 
   meta: {
