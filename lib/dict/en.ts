@@ -494,6 +494,15 @@ export const en = {
     cta: { label: 'Become a clubmate', href: p(routes.join) },
   },
 
+  /* --------------------------------------------------------------- Strava -- */
+  strava: {
+    follow: 'Follow us on Strava',
+    join: 'Join the club on Strava',
+    clubHeading: 'BEAT Colombia on Strava',
+    clubBody:
+      'Upload Sunday’s ride and compare the climb with the rest of the club. New rides go up there first.',
+  },
+
   /* ---------------------------------------------------- Inauguration ride -- */
   inauguration: {
     badge: 'Club inauguration',

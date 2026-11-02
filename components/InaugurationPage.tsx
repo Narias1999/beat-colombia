@@ -3,6 +3,7 @@ import PartnerLogos from '@/components/PartnerLogos';
 import SmartLink from '@/components/SmartLink';
 import LeadForm from '@/components/LeadForm';
 import ElevationProfile from '@/components/ElevationProfile';
+import StravaIcon from '@/components/StravaIcon';
 import { ext, PATIOS_MEETING_POINT_EMBED } from '@/lib/config';
 import { getDict } from '@/lib/dict';
 import type { Locale } from '@/lib/i18n';
@@ -25,7 +26,8 @@ function Pin() {
 }
 
 export default function InaugurationPage({ locale }: { locale: Locale }) {
-  const t = getDict(locale).inauguration;
+  const dict = getDict(locale);
+  const t = dict.inauguration;
 
   return (
     <PageShell locale={locale}>
@@ -86,6 +88,24 @@ export default function InaugurationPage({ locale }: { locale: Locale }) {
             <h2 className="text-3xl font-extrabold text-ink md:text-4xl">{t.profile.heading}</h2>
             <p className="mt-4 leading-relaxed text-ink/75">{t.profile.body}</p>
             <p className="mt-4 text-sm text-ink/50">{t.profile.note}</p>
+
+            {/* The climb is what people came to read about, so the club's
+                Strava sits right under it rather than in a social bar. */}
+            <div className="mt-8 rounded-card border border-black/10 bg-white p-6">
+              <p className="flex items-center gap-2 text-sm font-extrabold uppercase tracking-wider text-teal">
+                <StravaIcon size={16} />
+                {dict.strava.clubHeading}
+              </p>
+              <p className="mt-2 text-[15px] leading-relaxed text-ink/75">{dict.strava.clubBody}</p>
+              <SmartLink
+                href={ext.strava}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-full border-2 border-teal px-6 py-2.5 text-sm font-bold text-teal transition-colors hover:bg-teal hover:text-white"
+              >
+                {dict.strava.join}
+              </SmartLink>
+            </div>
           </div>
           <div className="rounded-card border border-black/10 bg-neutral-50 p-5 text-ink md:p-7">
             <ElevationProfile labels={t.profile.labels} narrow className="h-[260px] w-full md:hidden" />

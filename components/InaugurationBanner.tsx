@@ -1,6 +1,7 @@
 import SmartLink from '@/components/SmartLink';
 import ElevationProfile from '@/components/ElevationProfile';
-import { routes } from '@/lib/config';
+import StravaIcon from '@/components/StravaIcon';
+import { ext, routes } from '@/lib/config';
 import { getDict } from '@/lib/dict';
 import { localePath, type Locale } from '@/lib/i18n';
 
@@ -9,7 +10,8 @@ import { localePath, type Locale } from '@/lib/i18n';
  * Full-bleed so it reads as a break in the page rather than another card.
  */
 export default function InaugurationBanner({ locale }: { locale: Locale }) {
-  const t = getDict(locale).inauguration;
+  const dict = getDict(locale);
+  const t = dict.inauguration;
   const href = localePath(locale, routes.inauguration);
 
   return (
@@ -35,8 +37,17 @@ export default function InaugurationBanner({ locale }: { locale: Locale }) {
               >
                 {t.homeCta}
               </SmartLink>
-              <span className="text-sm font-bold text-white/70">{t.spotsNote}</span>
+              <SmartLink
+                href={ext.strava}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[15px] font-bold text-white/80 transition-colors hover:text-teal-mint"
+              >
+                <StravaIcon />
+                {dict.strava.follow}
+              </SmartLink>
             </div>
+            <p className="mt-4 text-sm font-bold text-white/60">{t.spotsNote}</p>
           </div>
 
           <div className="lg:pb-2">

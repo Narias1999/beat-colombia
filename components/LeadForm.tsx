@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import SmartLink from '@/components/SmartLink';
+import StravaIcon from '@/components/StravaIcon';
 import { ext } from '@/lib/config';
 import { getDict } from '@/lib/dict';
 import type { Locale } from '@/lib/i18n';
@@ -138,6 +139,16 @@ export default function LeadForm({
             >
               <Pin />
               {dict.inauguration.map.openInMaps}
+            </SmartLink>
+            {/* Natural next step once the spot is secured. */}
+            <SmartLink
+              href={ext.strava}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-bold text-white/85 transition-colors hover:text-teal-mint"
+            >
+              <StravaIcon size={16} />
+              {dict.strava.join}
             </SmartLink>
             <button
               type="button"

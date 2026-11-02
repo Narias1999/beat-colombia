@@ -496,6 +496,15 @@ export const es: Dict = {
     cta: { label: 'Hazte parte del club', href: p(routes.join) },
   },
 
+  /* --------------------------------------------------------------- Strava -- */
+  strava: {
+    follow: 'Síguenos en Strava',
+    join: 'Únete al club en Strava',
+    clubHeading: 'BEAT Colombia en Strava',
+    clubBody:
+      'Sube tu actividad del domingo y compara la subida con la del resto del club. Las próximas rodadas salen ahí primero.',
+  },
+
   /* ---------------------------------------------------- Inauguration ride -- */
   inauguration: {
     badge: 'Inauguración del club',

@@ -24,10 +24,10 @@ export const routes = {
 
 // External links — redirect to the original site (or the real shop)
 export const ext = {
-  // The shop stays on its own domain; Strava is the club's real Strava page.
+  // The shop stays on its own domain; Strava is BEAT Colombia's own club.
   // Everything else used to point at the Dutch site and has been removed.
   shop: 'https://beatcycling.shop/',
-  strava: 'https://www.strava.com/clubs/beatcyclingclub',
+  strava: 'https://www.strava.com/clubs/BEATCOLOMBIA',
   // Meeting point for the inaugural ride, as shared by the club.
   patiosMeetingPoint: 'https://maps.app.goo.gl/4SxQcYyokLgmmPmn9',
 };
