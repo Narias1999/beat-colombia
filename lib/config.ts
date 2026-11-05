@@ -29,12 +29,12 @@ export const ext = {
   shop: 'https://beatcycling.shop/',
   strava: 'https://www.strava.com/clubs/BEATCOLOMBIA',
   // Meeting point for the inaugural ride, as shared by the club.
-  patiosMeetingPoint: 'https://maps.app.goo.gl/4SxQcYyokLgmmPmn9',
+  rideMeetingPoint: 'https://maps.app.goo.gl/QowpaAwFfkteV8kR6',
 };
 
 // Keyless Google Maps iframe (the classic /maps?q= embed needs no API key).
-export const PATIOS_MEETING_POINT_EMBED =
-  'https://maps.google.com/maps?q=4.663790,-74.047730&z=16&output=embed';
+export const RIDE_MEETING_POINT_EMBED =
+  'https://maps.google.com/maps?q=4.612662,-74.069497&z=16&output=embed';
 
 // Official partner/supplier logos — the site's real assets (white marks).
 export const partners = [

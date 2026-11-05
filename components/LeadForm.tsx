@@ -132,7 +132,7 @@ export default function LeadForm({
 
           <div className="mt-10 flex flex-col items-center gap-4">
             <SmartLink
-              href={ext.patiosMeetingPoint}
+              href={ext.rideMeetingPoint}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-teal-mint px-7 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03]"

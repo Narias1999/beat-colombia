@@ -4,7 +4,7 @@ import SmartLink from '@/components/SmartLink';
 import LeadForm from '@/components/LeadForm';
 import ElevationProfile from '@/components/ElevationProfile';
 import StravaIcon from '@/components/StravaIcon';
-import { ext, PATIOS_MEETING_POINT_EMBED } from '@/lib/config';
+import { ext, RIDE_MEETING_POINT_EMBED } from '@/lib/config';
 import { getDict } from '@/lib/dict';
 import type { Locale } from '@/lib/i18n';
 
@@ -137,7 +137,7 @@ export default function InaugurationPage({ locale }: { locale: Locale }) {
             <p className="mt-1 text-white/80">{t.map.address}</p>
             <p className="mt-6 max-w-md leading-relaxed text-white/90">{t.map.body}</p>
             <SmartLink
-              href={ext.patiosMeetingPoint}
+              href={ext.rideMeetingPoint}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-teal-mint px-7 py-3 text-[15px] font-bold text-white transition-transform hover:scale-[1.03]"
@@ -148,7 +148,7 @@ export default function InaugurationPage({ locale }: { locale: Locale }) {
           </div>
           <div className="min-h-[320px] bg-white/10 lg:min-h-full">
             <iframe
-              src={PATIOS_MEETING_POINT_EMBED}
+              src={RIDE_MEETING_POINT_EMBED}
               title={t.map.embedTitle}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

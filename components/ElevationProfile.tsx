@@ -1,36 +1,39 @@
 type Point = { km: number; m: number };
 
 /**
- * Alto de Patios, ridden the usual way: from the Carrera Septima meeting point
- * up the La Calera road to the summit stalls. Roughly 7 km of climbing, which
- * is the 14 km the club is announcing once you add the descent back down.
+ * Alto del Verjón, ridden from the Carrera Séptima meeting point in San Diego
+ * out along the Circunvalar and up the Choachí road to the pass — roughly
+ * 16 km of climbing, 32 km once you add the descent back down.
  *
- * Sampled every 500 m from the published figures for the climb, so the shape is
- * right but the numbers are approximate. Swap this array for the real GPX
- * samples once we export the official route file and everything below (plus the
- * stats in the dictionaries) follows automatically.
+ * Sampled every kilometre. Published figures for this climb disagree a lot
+ * (11–16 km and 600–780 m depending on where each source starts measuring),
+ * so the shape is right but the numbers are an estimate. Swap this array for
+ * the real GPX samples once we export the official route file and everything
+ * below — plus the stats in the dictionaries — follows automatically.
  */
 const PROFILE: Point[] = [
-  { km: 0, m: 2630 },
-  { km: 0.5, m: 2660 },
-  { km: 1, m: 2690 },
-  { km: 1.5, m: 2722 },
-  { km: 2, m: 2755 },
-  { km: 2.5, m: 2785 },
-  { km: 3, m: 2812 },
-  { km: 3.5, m: 2835 },
-  { km: 4, m: 2862 },
-  { km: 4.5, m: 2895 },
-  { km: 5, m: 2925 },
-  { km: 5.5, m: 2950 },
-  { km: 6, m: 2975 },
-  { km: 6.5, m: 3005 },
-  { km: 7, m: 3030 },
+  { km: 0, m: 2550 },
+  { km: 1, m: 2580 },
+  { km: 2, m: 2615 },
+  { km: 3, m: 2650 },
+  { km: 4, m: 2690 },
+  { km: 5, m: 2735 },
+  { km: 6, m: 2785 },
+  { km: 7, m: 2835 },
+  { km: 8, m: 2880 },
+  { km: 9, m: 2925 },
+  { km: 10, m: 2975 },
+  { km: 11, m: 3025 },
+  { km: 12, m: 3075 },
+  { km: 13, m: 3130 },
+  { km: 14, m: 3185 },
+  { km: 15, m: 3245 },
+  { km: 16, m: 3300 },
 ];
 
-const MIN_M = 2600;
-const MAX_M = 3070;
-const GRID_M = [2700, 2800, 2900, 3000];
+const MIN_M = 2500;
+const MAX_M = 3360;
+const GRID_M = [2600, 2800, 3000, 3200];
 
 export type ElevationLabels = {
   /** Accessible description of the whole chart. */
@@ -125,7 +128,7 @@ export default function ElevationProfile({ labels, compact = false, narrow = fal
 
       {!compact && (
         <g>
-          {(narrow ? [0, 2, 4, 6] : [0, 1, 2, 3, 4, 5, 6, 7]).map((km) => (
+          {(narrow ? [0, 4, 8, 12, 16] : [0, 2, 4, 6, 8, 10, 12, 14, 16]).map((km) => (
             <g key={km}>
               <line
                 x1={x(km)}
